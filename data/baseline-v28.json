@@ -1,0 +1,64 @@
+{
+  "version": "v28",
+  "measured_at": "2026-11-01T16:27:46+08:00",
+  "persona_chars": 3426,
+  "model": {
+    "provider_id": "dragon3api",
+    "model_name": "deepseek-v4.1-flash",
+    "reasoning_effort": "none",
+    "fallback": ["ymeng", "ymeng_hy4"]
+  },
+  "metrics": {
+    "meta_talk_rate": 0.0,
+    "echo_first_clause_2gram": null,
+    "echo_first_clause_3gram": 0.143,
+    "sample_size": 14,
+    "note": "小样本，需要真实群聊数据复核"
+  },
+  "baseline_history": {
+    "v25_real_group_chat": {
+      "echo_2gram": 0.61,
+      "echo_3gram": 0.36,
+      "sample_size": 173,
+      "source": "chat_history 真实群聊"
+    },
+    "v22": {
+      "ei_opener": 0.42,
+      "ma_ya_ender": 0.33,
+      "same_head_adjacent": 0.61,
+      "length_cv": 0.31,
+      "sample_size": 60
+    },
+    "v23": {
+      "ei_opener": 0.17,
+      "ma_ya_ender": 0.25,
+      "same_head_adjacent": 0.48,
+      "length_cv": 0.59,
+      "sample_size": 24
+    },
+    "copy_rate": {
+      "v23": 0.88,
+      "v24": 0.0,
+      "note": "人格成品台词的逐字照抄率，8 组实测"
+    }
+  },
+  "infra_state": {
+    "persona_tools": null,
+    "persona_tools_note": "None = 全部工具可用",
+    "kb_count": 4,
+    "kb_chunks_total": 4463,
+    "kb_slang_chunks_added": 11,
+    "meme_count": 119,
+    "meme_all_annotated": true,
+    "reply_with_quote": true,
+    "initial_probability": 0.12,
+    "reply_density_max_replies": 6,
+    "enable_memory_injection": true,
+    "expression_patterns_rows": 0
+  },
+  "known_issues": [
+    "webchat 强制流式，测不出自动配表情包（QQ 群正常）",
+    "中转站偶发把模型换成通用助手（需监控 provider_id）",
+    "self_learning 若重开 enable_auto_learning 会重新污染"
+  ]
+}

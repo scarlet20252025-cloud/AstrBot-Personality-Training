@@ -1,0 +1,15 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 本地测试产物
+*-out.txt
+chat-analysis.txt
+align*.txt
+
+# 敏感
+.credentials
+*.key
+k.txt
+data/sample-chat_history.json
